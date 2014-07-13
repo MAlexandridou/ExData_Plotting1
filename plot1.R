@@ -11,6 +11,7 @@ names(data)<-c("Date","Time","Global_active_power", "Global_reactive_power",
                "Sub_metering_3")
                ## For Some reason it calculates the day AFTER the date i have entered...
                ## For example, Inserted >=2007-01-31 and it chooses from >= 2007-02-01
+               ## Check it and if some of you find out why , please let me know at the comment section
 data<-subset(data,as.Date(Date) >= '2007-01-31' & as.Date(Date)<='2007-02-01')
 
 png(filename="plot1.png",width=480,height=480)
