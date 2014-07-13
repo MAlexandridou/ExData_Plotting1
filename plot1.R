@@ -9,7 +9,7 @@ data<-as.data.frame(cbind(Date,first$Time,first$Global_active_power,
 names(data)<-c("Date","Time","Global_active_power", "Global_reactive_power", 
                "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2",
                "Sub_metering_3")
-               ## For Some reason it calculates the day next to the date i have entered...
+               ## For Some reason it calculates the day AFTER the date i have entered...
                ## For example, Inserted >=2007-01-31 and it chooses from >= 2007-02-01
 data<-subset(data,as.Date(Date) >= '2007-01-31' & as.Date(Date)<='2007-02-01')
 
